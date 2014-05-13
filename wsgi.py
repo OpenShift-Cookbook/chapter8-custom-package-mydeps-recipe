@@ -1,5 +1,6 @@
 #!/usr/bin/python
-import os
+import os,sys
+sys.path.append(os.path.join(os.getenv("OPENSHIFT_REPO_DIR"), "mydeps"))  
 
 virtenv = os.environ['OPENSHIFT_PYTHON_DIR'] + '/virtenv/'
 virtualenv = os.path.join(virtenv, 'bin/activate_this.py')
